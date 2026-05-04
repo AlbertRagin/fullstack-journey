@@ -73,4 +73,74 @@ button {
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+/* Отступы между секциями */
+aside,
+table {
+  margin-bottom: 40px;
+}
+
+button:hover {
+  background: #2980b9;
+}
+
+/* Задача 1: Навигация */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #2c3e50;
+  padding: 15px 30px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 15px;
+  border-radius: 4px;
+  transition: background 0.3s;
+}
+
+nav a:hover {
+  background: #34495e;
+}
+
+/* Задача 2: Карточки статей */
+main {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+article {
+  flex: 1 1 300px;
+  min-width: 280px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Задача 3: Макет с боковой панелью */
+.container {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+main {
+  flex: 3;
+}
+
+aside {
+  flex: 1;
+  min-width: 250px;
 }
