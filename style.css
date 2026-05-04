@@ -211,4 +211,134 @@ aside {
   padding: 15px;
 }
 
+/* Mobile-first: базовые стили для телефонов */
+body {
+  font-size: 16px;
+  padding: 10px;
+}
+
+nav {
+  flex-direction: column;
+  padding: 10px;
+}
+
+nav ul {
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+/* Планшет */
+@media (min-width: 768px) {
+  body {
+    padding: 20px;
+  }
+  
+  nav {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  nav ul {
+    flex-direction: row;
+    gap: 30px;
+    margin-top: 0;
+  }
+}
+
+/* Десктоп */
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  main {
+    display: flex;
+    gap: 30px;
+  }
+  
+  article {
+    flex: 1;
+  }
+}
+
+.table-wrapper {
+  overflow-x: auto; /* горизонтальная прокрутка */
+  -webkit-overflow-scrolling: touch; /* плавная прокрутка на iOS */
+  width: 100%; /* занимает всю ширину родителя */
+  margin-bottom: 20px; /* отступ снизу */
+}
+
+.pricing-table {
+  min-width: 600px; /* минимальная ширина таблицы */
+  width: 100%; /* растягивается на всю ширину контейнера */
+  border-collapse: collapse; /* слитые границы */
+}
+
+.burger {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 30px;
+}
+
+@media (max-width: 767px) {
+  .burger {
+    display: block;
+  }
+  
+  .nav-menu {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    background: #2c3e50;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    padding: 20px 0;
+  }
+  
+  .nav-menu.active {
+    display: flex;
+  }
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #2c3e50;
+  padding: 15px 30px;
+}
+
+.logo {
+  color: white;
+  font-weight: bold;
+}
+
+.nav-menu a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 15px;
+  transition: background 0.3s;
+}
+
+.nav-menu a:hover {
+  background: #34495e;
+  border-radius: 4px;
+}
+
+
 

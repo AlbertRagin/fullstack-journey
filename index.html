@@ -7,23 +7,26 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
+    <div class="page-layout">
+    <header  class="nav">
         <h1>Мой сайт</h1>
         <nav>
-            <ul>
-                <li><a href="#home">Главная</a></li>
-                <li><a href="#about">О нас</a></li>
-                <li><a href="#services">Услуги</a></li>
-                <li><a href="#contact">Контакты</a></li>
-            </ul>
+             <div class="logo">Мой сайт</div>
+                <button class="burger" aria-label="Menu">☰</button>
+                <ul class="nav-menu">
+                    <li><a href="#">Главная</a></li>
+                    <li><a href="#">О нас</a></li>
+                    <li><a href="#">Услуги</a></li>
+                    <li><a href="#">Контакты</a></li>
+                </ul>
         </nav>
     </header>
     <div class="container">
-    <main>
+    <main class="main">
         <article><h2>Art1</h2><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, laboriosam? Dolorum vel illo cupiditate perferendis sapiente fugiat veniam optio eligendi! Ut, nobis. Perferendis fuga voluptas ullam libero porro recusandae maiores?</p></article>
         <article><h2>Art2</h2><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta quis maiores at provident nesciunt praesentium ipsam impedit error itaque voluptatum suscipit, porro molestiae, modi nobis iusto, nisi eveniet! Iste, aspernatur.</p></article>
     </main>
-    <aside>
+    <aside class="aside">
         <form action="/subscribe" method="POST">
         <div class="form-group">
             <label for="subscriber-name">Имя:</label>
@@ -52,30 +55,28 @@
     </div>
 
     <section>
-        <div class="pricing-table">
-                <!-- Заголовок -->
-                <div class="pricing-cell pricing-header">Тариф</div>
-                <div class="pricing-cell pricing-header">Базовый</div>
-                <div class="pricing-cell pricing-header">Профессиональный</div>
-                <div class="pricing-cell pricing-header">Премиум</div>
+        <div class="table-wrapper">
+            <div class="pricing-table">
+                        <!-- Заголовок -->
+                        <div class="pricing-cell pricing-header">Тариф</div>
+                        <div class="pricing-cell pricing-header">Базовый</div>
+                        <div class="pricing-cell pricing-header">Профессиональный</div>
+                        <div class="pricing-cell pricing-header">Премиум</div>
 
-                <!-- Строка 1 -->
-                <div class="pricing-cell">Цена</div>
-                <div class="pricing-cell">1 000 руб/мес</div>
-                <div class="pricing-cell">3 000 руб/мес</div>
-                <div class="pricing-cell">5 000 руб/мес</div>
+                        <!-- Строка 1 -->
+                        <div class="pricing-cell">Цена</div>
+                        <div class="pricing-cell">1 000 руб/мес</div>
+                        <div class="pricing-cell">3 000 руб/мес</div>
+                        <div class="pricing-cell">5 000 руб/мес</div>
 
-                <!-- Строка 2 -->
-                <div class="pricing-cell">Пользователи</div>
-                <div class="pricing-cell">5</div>
-                <div class="pricing-cell">20</div>
-                <div class="pricing-cell">Безлимит</div>
+                        <!-- Строка 2 -->
+                        <div class="pricing-cell">Пользователи</div>
+                        <div class="pricing-cell">5</div>
+                        <div class="pricing-cell">20</div>
+                        <div class="pricing-cell">Безлимит</div>
+            </div>
+        </div>
 
-                <!-- Добавьте другие строки по необходимости -->
-                </div>
-
-
-        <!-- <h3>Table</h3>
         <table class="pricing-table">
             <thead>
                 <tr>
@@ -141,9 +142,19 @@
 
 
 
-    <footer>
+    <footer class="footer">
         <h3>copyright@2026</h3>
     </footer>
+    </div>
+    <script>
+        const burger = document.querySelector('.burger');
+        const navMenu = document.querySelector('.nav-menu');
+
+        burger.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+    </script>
+
 </body>
 
 </html>
