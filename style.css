@@ -144,3 +144,71 @@ aside {
   flex: 1;
   min-width: 250px;
 }
+
+.pricing-table {
+  display: grid;
+  grid-template-columns: 1fr repeat(3, 250px); /* 4 колонки: первая гибкая, остальные по 250 px */
+  gap: 1px; /* Отступ между ячейками */
+  background: #ddd; /* Фон сетки */
+  border: 1px solid #ddd; /* Рамка вокруг таблицы */
+}
+
+.pricing-cell {
+  background: white; /* Белый фон ячеек */
+  padding: 15px; /* Внутренние отступы */
+  text-align: center; /* Выравнивание текста по центру */
+}
+
+/* Стили для заголовков */
+.pricing-header {
+  background: #f8f9fa; /* Светло‑серый фон для заголовков */
+  font-weight: bold; /* Жирный шрифт */
+}
+
+/* Первая колонка (названия тарифов) */
+.pricing-cell:first-child {
+  text-align: left; /* Выравнивание текста влево */
+  font-weight: 600; /* Полужирный шрифт */
+}
+
+.page-layout {
+  display: grid;
+  grid-template-columns: 250px 1fr 300px; /* Левая колонка 250 px, центр — гибкий, правая — 300 px */
+  grid-template-rows: auto 1fr auto; /* Шапка и футер по содержимому, основной контент занимает всё оставшееся пространство */
+  grid-template-areas:
+    "nav nav nav"
+    "main main aside"
+    "footer footer footer";
+  gap: 30px; /* Отступы между областями */
+  min-height: 100vh; /* Высота макета — минимум на весь экран */
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.nav {
+  grid-area: nav;
+  background: #2c3e50;
+  color: white;
+  padding: 15px 30px;
+}
+
+.main {
+  grid-area: main;
+  background: #f8f9fa;
+  padding: 20px;
+}
+
+.aside {
+  grid-area: aside;
+  background: #ecf0f1;
+  padding: 20px;
+}
+
+.footer {
+  grid-area: footer;
+  background: #34495e;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
+
+

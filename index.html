@@ -18,6 +18,7 @@
             </ul>
         </nav>
     </header>
+    <div class="container">
     <main>
         <article><h2>Art1</h2><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, laboriosam? Dolorum vel illo cupiditate perferendis sapiente fugiat veniam optio eligendi! Ut, nobis. Perferendis fuga voluptas ullam libero porro recusandae maiores?</p></article>
         <article><h2>Art2</h2><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta quis maiores at provident nesciunt praesentium ipsam impedit error itaque voluptatum suscipit, porro molestiae, modi nobis iusto, nisi eveniet! Iste, aspernatur.</p></article>
@@ -48,32 +49,56 @@
         </form>
 
     </aside>
+    </div>
 
     <section>
-        <h3>Table</h3>
-        <table>
+        <div class="pricing-table">
+                <!-- Заголовок -->
+                <div class="pricing-cell pricing-header">Тариф</div>
+                <div class="pricing-cell pricing-header">Базовый</div>
+                <div class="pricing-cell pricing-header">Профессиональный</div>
+                <div class="pricing-cell pricing-header">Премиум</div>
+
+                <!-- Строка 1 -->
+                <div class="pricing-cell">Цена</div>
+                <div class="pricing-cell">1 000 руб/мес</div>
+                <div class="pricing-cell">3 000 руб/мес</div>
+                <div class="pricing-cell">5 000 руб/мес</div>
+
+                <!-- Строка 2 -->
+                <div class="pricing-cell">Пользователи</div>
+                <div class="pricing-cell">5</div>
+                <div class="pricing-cell">20</div>
+                <div class="pricing-cell">Безлимит</div>
+
+                <!-- Добавьте другие строки по необходимости -->
+                </div>
+
+
+        <!-- <h3>Table</h3>
+        <table class="pricing-table">
             <thead>
                 <tr>
-                <th scope="col">Тариф</th>
-                <th scope="col">Базовый</th>
-                <th scope="col">Профессиональный</th>
-                <th scope="col">Премиум</th>
+                <th class="pricing-cell pricing-header" scope="col">Тариф</th>
+                <th class="pricing-cell pricing-header" scope="col">Базовый</th>
+                <th class="pricing-cell pricing-header" scope="col">Профессиональный</th>
+                <th class="pricing-cell pricing-header" scope="col">Премиум</th>
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                <th>Цена, руб./мес</th>
+                <tr class="pricing-cell">
+                <th >Цена, руб./мес</th>
                 <td>990</td>
                 <td>1 990</td>
                 <td>3 490</td>
                 </tr>
-                <tr>
+                <tr class="pricing-cell">
                 <th>Количество проектов</th>
                 <td>5</td>
                 <td>20</td>
                 <td>Неограниченно</td>
                 </tr>
-                <tr>
+                <tr class="pricing-cell">
                 <th>Поддержка</th>
                 <td>
                     <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
@@ -97,7 +122,7 @@
                     Персональный менеджер
                 </td>
                 </tr>
-                <tr>
+                <tr class="pricing-cell">
                 <th>Облачное хранилище</th>
                 <td>10 ГБ</td>
                 <td>50 ГБ</td>
@@ -111,8 +136,11 @@
                 </td>
                 </tr>
             </tfoot>
-            </table>
+            </table> -->
     </section>
+
+
+
     <footer>
         <h3>copyright@2026</h3>
     </footer>
